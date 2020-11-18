@@ -1,0 +1,16 @@
+*.tfstate
+*.backup
+tmp
+*.bak
+bak
+
+*.pyc
+
+# vim temp files
+.*.swp
+
+versions.tf
+.terraform
+terraform.tfvars
+private
+authorized-keys
