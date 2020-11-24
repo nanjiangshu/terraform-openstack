@@ -1,7 +1,7 @@
 #!/bin/bash
-
-sudo apt install -y python-minimal
-sudo apt install -y python3
-sudo apt install -y apache2
-sudo apt install -y python-pip
-sudo apt install -y virtualenv
+echo "install apache and dependencies"
+sudo apt-get install -y python-minimal
+sudo apt-get install -y python3
+sudo apt-get install -y apache2
+sudo apt-get install -y python-pip
+sudo apt-get install -y virtualenv
