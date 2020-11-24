@@ -142,6 +142,7 @@ resource "null_resource" "provision" {
       "bash /home/ubuntu/src/add-sshkeys.sh",
       "bash /home/ubuntu/src/mount_volume.sh",
       "bash /home/ubuntu/src/install_apache.sh",
+      "bash /home/ubuntu/src/install_docker.sh",
       "bash /home/ubuntu/src/install_singularity.sh",
     ]
   }
