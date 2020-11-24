@@ -36,7 +36,7 @@ wget -O /tmp/go${GO_VERSION}.${OS}-${ARCH}.tar.gz https://dl.google.com/go/go${G
 echo 'export GOPATH=${HOME}/go' >> ~/.bashrc
 echo 'export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin' >> ~/.bashrc
 
-source ~/.bashrc
+. ~/.bashrc
 
 currdir=$PWD
 cd $tmpdir
