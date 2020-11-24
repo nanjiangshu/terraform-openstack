@@ -139,6 +139,7 @@ resource "null_resource" "provision" {
   }
   provisioner "remote-exec" {
     inline = [
+      "sudo apt upgrade" ,
       "bash /home/ubuntu/src/add-sshkeys.sh",
       "bash /home/ubuntu/src/mount_volume.sh",
       "bash /home/ubuntu/src/install_apache.sh",
