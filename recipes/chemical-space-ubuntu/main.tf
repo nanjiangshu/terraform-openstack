@@ -62,14 +62,14 @@ resource "openstack_compute_secgroup_v2" "secgroup_webap" {
     cidr        = "0.0.0.0/0"
   }
   rule {
-    from_port   = 8080
-    to_port     = 8080
+    from_port   = 4200
+    to_port     = 4200
     ip_protocol = "tcp"
     cidr        = "0.0.0.0/0"
   }
   rule {
-    from_port   = 8888
-    to_port     = 8888
+    from_port   = 5000
+    to_port     = 5000
     ip_protocol = "tcp"
     cidr        = "0.0.0.0/0"
   }
@@ -172,8 +172,10 @@ provisioner "remote-exec" {
       "sudo DEBIAN_FRONTEND=noninteractive apt install -y ruby groovy",
       "bash $HOME/setup/add-sshkeys.sh",
       "bash $HOME/setup/mount_volume.sh ${var.project_suffix}",
+      "bash $HOME/setup/get-chemical-space.sh",
       "bash $HOME/setup/install_docker.sh",
       "bash $HOME/setup/install_conda.sh",
+      "bash $HOME/setup/run_docker.sh",
     ]
 }
 
