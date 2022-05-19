@@ -1,8 +1,8 @@
 #!/bin/bash
 
 appdir=$HOME/software/chemical-space-web-service 
-pushd appdir
+pushd $appdir
 npm install
 npm install --save-dev
 
-docker compose build
+docker-compose build

@@ -179,6 +179,7 @@ provisioner "remote-exec" {
       "bash $HOME/setup/mount_volume.sh ${var.project_suffix}",
       "bash $HOME/setup/install_docker.sh",
       "bash $HOME/setup/install_conda.sh",
+      "bash $HOME/setup/install_node.sh",
       "bash $HOME/setup/run_docker.sh",
     ]
 }
