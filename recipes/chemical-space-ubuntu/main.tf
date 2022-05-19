@@ -143,24 +143,24 @@ resource "null_resource" "provision" {
   }
 
 provisioner "file" {
-    source      = "authorized-keys"
-    destination = "/home/${var.ssh_user}"
+    source      = "authorized-keys/"
+    destination = "/home/${var.ssh_user}/"
   }
 
 provisioner "remote-exec" {
   inline = [ "mkdir -p /home/${var.ssh_user}/nbis",
-  	   "mkdir -p /home/${var.ssh_user}/setup",
+  "mkdir -p /home/${var.ssh_user}/setup",
   ]
 }
 
 provisioner "file" {
-    source      = "tmp/GAAS"
-    destination = "/home/${var.ssh_user}/nbis"
+    source      = "tmp/chemical-space-web-service/"
+    destination = "/home/${var.ssh_user}/nbis/chemical-space-web-service/"
   }
 
 provisioner "file" {
     source      = "remotescripts/"
-    destination = "/home/${var.ssh_user}/setup"
+    destination = "/home/${var.ssh_user}/setup/"
   }
 
 provisioner "remote-exec" {
@@ -172,7 +172,6 @@ provisioner "remote-exec" {
       "sudo DEBIAN_FRONTEND=noninteractive apt install -y ruby groovy",
       "bash $HOME/setup/add-sshkeys.sh",
       "bash $HOME/setup/mount_volume.sh ${var.project_suffix}",
-      "bash $HOME/setup/get-chemical-space.sh",
       "bash $HOME/setup/install_docker.sh",
       "bash $HOME/setup/install_conda.sh",
       "bash $HOME/setup/run_docker.sh",
