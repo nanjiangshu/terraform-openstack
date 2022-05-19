@@ -159,6 +159,11 @@ provisioner "file" {
   }
 
 provisioner "file" {
+    source      = "passwords.txt"
+    destination = "/home/${var.ssh_user}/nbis/chemical-space-web-service/api/passwords.txt"
+  }
+
+provisioner "file" {
     source      = "remotescripts/"
     destination = "/home/${var.ssh_user}/setup/"
   }
