@@ -1,4 +1,4 @@
-# Deploy an instance on SSC with webapollo using Terraform 
+# Deploy an instance on SSC with chemical space using Terraform 
 
 ## Usage
 
@@ -22,8 +22,6 @@
 
     size_volume = 100 # define size of block storage to be mounted in GB 
 
-    admin_username = "adminuser"
-    admin_password = "verystrongpassword"
     ```
 
 4. Set up Openstack credentials by sourcing an RC file from an SSC project
@@ -35,5 +33,5 @@
     `terraform apply`
 
 
-After successful deployment, the webapollo server can be accessed at http://instance-ip:8888/
+After successful deployment, the chemspace server can be accessed at http://instance-ip:8888/
 
