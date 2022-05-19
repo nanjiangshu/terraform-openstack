@@ -143,8 +143,8 @@ resource "null_resource" "provision" {
   }
 
 provisioner "file" {
-    source      = "authorized-keys/"
-    destination = "/home/${var.ssh_user}/"
+    source      = "authorized-keys"
+    destination = "/home/${var.ssh_user}"
   }
 
 provisioner "remote-exec" {
@@ -154,8 +154,8 @@ provisioner "remote-exec" {
 }
 
 provisioner "file" {
-    source      = "tmp/chemical-space-web-service/"
-    destination = "/home/${var.ssh_user}/nbis/chemical-space-web-service/"
+    source      = "tmp/chemical-space-web-service"
+    destination = "/home/${var.ssh_user}/nbis"
   }
 
 provisioner "file" {
@@ -165,7 +165,7 @@ provisioner "file" {
 
 provisioner "file" {
     source      = "remotescripts/"
-    destination = "/home/${var.ssh_user}/setup/"
+    destination = "/home/${var.ssh_user}/setup"
   }
 
 provisioner "remote-exec" {
