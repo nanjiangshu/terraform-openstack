@@ -1,7 +1,7 @@
 #!/bin/bash
 
-appdir=$HOME/software/chemical-space-web-service 
-pushd $appdir
+appdir=$HOME/software/chemical-space-web-service
+pushd $appdir/frontend
 npm install
 npm install --save-dev
 
