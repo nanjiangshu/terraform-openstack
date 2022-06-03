@@ -7,3 +7,4 @@ npm audit fix
 npm install --save-dev
 
 docker-compose build
+docker-compose up -d

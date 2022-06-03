@@ -68,8 +68,8 @@ resource "openstack_compute_secgroup_v2" "secgroup_webap" {
     cidr        = "0.0.0.0/0"
   }
   rule {
-    from_port   = 5000
-    to_port     = 5000
+    from_port   = 82
+    to_port     = 82
     ip_protocol = "tcp"
     cidr        = "0.0.0.0/0"
   }
