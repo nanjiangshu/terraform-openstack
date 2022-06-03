@@ -1,6 +1,6 @@
 #!/bin/bash
 
-appdir=$HOME/software/chemical-space-web-service
+appdir=$HOME/nbis/chemical-space-web-service
 pushd $appdir/frontend
 npm install
 npm audit fix
